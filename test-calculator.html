@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+     <input type="number" placeholder="Nhap so thu nhat" id="num1">
+
+     <select name="" id="cal">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="x">x</option>
+          <option value="/">/</option>
+     </select>
+
+     <input type="number" placeholder="Nhap so thu 2" id="num2">
+
+     <button onclick="calculator();">Result</button>
+
+     <p id="result"></p>
+     
+</body>
+</html>
+
+<script>
+     
+     function calculator() {
+
+          let num1 = +document.getElementById("num1").value;
+
+          let num2 = +document.getElementById("num1").value;
+          
+          let cal = document.getElementById("cal").value;
+
+          let result = 0;
+
+          if (cal=="+") {
+               result = num1 + num2;
+          } else if (cal=="-") {
+               result = num1 - num2;
+               } else if (cal=="x") {
+                    result = num1 * num2;
+                    } else if (cal == "/") {
+                         result = num1 / num2;
+                    }
+          
+          document.getElementById("result").innerHTML = "Ket qua la: " + result;
+          
+          // console.log(result);
+          }
+</script>
